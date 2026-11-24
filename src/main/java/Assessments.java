@@ -21,12 +21,18 @@ public abstract class Assessments {
     public boolean isAIAllowed() {
         return AIAllowed;
     }
-    public int getUGWeighting(){
-        return UGWeighting;
+    public int getWeighting(boolean Msc){
+       if(Msc){
+           return MscWeighting;
+       }
+       return UGWeighting;
     }
-    public int getMscWeighting(){
-        return MscWeighting;
+
+    public String getTitle(){
+        return title;
     }
+
+
 
 
 
