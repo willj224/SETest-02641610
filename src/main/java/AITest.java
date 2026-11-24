@@ -12,7 +12,7 @@ public class AITest extends Assessments{
     public double CalculatGrade() {
         return 0.4*functionalityGrade+0.6*verificationGrade;
     }
-    @Override
+
 
 
 }

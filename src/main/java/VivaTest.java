@@ -12,7 +12,6 @@ public class VivaTest extends Assessments{
     public double CalculatGrade(){
         return 0.5*designUnderstanding + 0.5*explanation;
     }
-    @Override
 
 
 }
