@@ -15,25 +15,23 @@ public abstract class Assessments {
 
     abstract double CalculatGrade();
 
-    public int getMaxMark() {
-        return maxMark;
-    }
+
     public boolean isAIAllowed() {
         return AIAllowed;
     }
-    public int getWeighting(boolean Msc){
-       if(Msc){
-           return MscWeighting;
-       }
-       return UGWeighting;
+
+    public int getWeighting(boolean Msc) {
+        if (Msc) {
+            return MscWeighting;
+        }
+        return UGWeighting;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-
-
-
-
 }
+
+
+

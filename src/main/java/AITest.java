@@ -5,8 +5,8 @@ public class AITest extends Assessments{
     private final double verificationGrade;
     public AITest(String CID){
         super(AssessmentFeed.AI_PROJECT,100, true, 70, 45);
-        functionalityGrade=AssessmentFeed.getResult(CID, "AI_PROJECT", AssessmentFeed.FUNCTIONALITY_MARK);
-        verificationGrade=AssessmentFeed.getResult(CID, "AI_PROJECT", AssessmentFeed.VERIFICATION_MARK);
+        functionalityGrade=AssessmentFeed.getResult(CID, "AI-Assisted Programming Project", AssessmentFeed.FUNCTIONALITY_MARK);
+        verificationGrade=AssessmentFeed.getResult(CID, "AI-Assisted Programming Project", AssessmentFeed.VERIFICATION_MARK);
     }
     @Override
     public double CalculatGrade() {

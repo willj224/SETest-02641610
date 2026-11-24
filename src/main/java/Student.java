@@ -1,6 +1,8 @@
 import assessments.AssessmentFeed;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Locale;
 
 public class Student {
@@ -21,7 +23,9 @@ public class Student {
     }
 
 
-
+    public List<Assessments> getAsssessments(){
+        return Collections.unmodifiableList(assessments);
+    }
     public String getName(){
         return name;
     }
@@ -31,13 +35,13 @@ public class Student {
     public String getYear(){
         return Year;
     }
-    double modulePercentage() {
+    String modulePercentage() {
         double total = 0;
         for (Assessments assessment : assessments) {
 
             total += assessment.CalculatGrade() * assessment.getWeighting("Msc".equals(Year)) / 100.0;
         }
-        return total;
+        return String.format(Locale.ROOT, "%.2f%%", total); //im doing thish for display later
     }
     String markFor(String title) {
         for (Assessments assessment : assessments) {
